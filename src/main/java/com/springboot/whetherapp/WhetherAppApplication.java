@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class WhetherAppApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(WhetherAppApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(WhetherAppApplication.class, args);
+    }
 
 }
