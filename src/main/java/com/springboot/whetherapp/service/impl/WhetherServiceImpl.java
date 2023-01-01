@@ -19,8 +19,9 @@ public class WhetherServiceImpl implements WhetherService {
         url = url.replace("{city}", cityValue);
         System.out.println("Url is: " + url);
 
-        ResponseEntity<WhetherResponseBean> whetherResponseEntity = null;
-        restTemplate.getForEntity(url, WhetherResponseBean.class);
+        ResponseEntity<WhetherResponseBean> whetherResponseEntity = restTemplate.getForEntity(url, WhetherResponseBean.class);
+
+
         System.out.println("Response status code is: " + whetherResponseEntity.getStatusCode());
         WhetherResponseBean whetherResponseBean = whetherResponseEntity.getBody();
 
