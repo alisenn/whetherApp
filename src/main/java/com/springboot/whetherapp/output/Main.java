@@ -11,11 +11,11 @@ public class Main {
 
     private double temp;
     @JsonProperty("feels_like")
-    private double feelsLike;
+    private double feels_like;
     @JsonProperty("temp_min")
-    private double tempMin;
+    private double temp_min;
     @JsonProperty("temp_max")
-    private double tempMax;
+    private double temp_max;
     private int pressure;
     private int humidity;
 

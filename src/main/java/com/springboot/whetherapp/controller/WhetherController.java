@@ -3,16 +3,17 @@ package com.springboot.whetherapp.controller;
 import com.springboot.whetherapp.output.WhetherResponseBean;
 import com.springboot.whetherapp.service.WhetherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+@CrossOrigin(origins = {"http://localhost:3000"})
 
 @RestController
 @RequestMapping("/whether")
 public class WhetherController {
-
+    @Value("$(app.city)")
+    private String cityParam;
     @Autowired
     WhetherService whetherServiceimpl;
     @RequestMapping(value = "/data", method = RequestMethod.GET,
